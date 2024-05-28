@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Bernard" />
+  <meta name="description" content="Bernard: Student" />
+  <meta name="keywords" content="web developer, web, developer, front-end, html, css, javascript, react, sql" />
+  <title>Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/style/index.css" />
+  <script src="./assets/script/app.js" type="module"></script>
+</head>
+
+<body>
+  <main>
+    <section class="note-container">
+      <div class="note-container-box">
+        <div class="header">
+          <div>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+          </div>
+          <div class="search-container">
+            <input type="text" placeholder="Type to search" />
+            <i class="fa-regular fa-pen-to-square"></i>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+        <section class="note-box-flex">
+          <div class="note-categories">
+            <p class="notebooks">Notebooks</p>
+            <div class="note-categories-flex selected-category">
+              <div>
+                <i class="fa-solid fa-book"></i>
+                <p>Recipes</p>
+              </div>
+              <p>0</p>
+            </div>
+            <div class="note-categories-flex">
+              <div>
+                <i class="fa-solid fa-book"></i>
+                <p>Travel</p>
+              </div>
+              <p>0</p>
+            </div>
+            <div class="note-categories-flex">
+              <div>
+                <i class="fa-solid fa-book"></i>
+                <p>Design</p>
+              </div>
+              <p>0</p>
+            </div>
+            <div class="note-categories-flex">
+              <div>
+                <i class="fa-solid fa-book"></i>
+                <p>Renovations</p>
+              </div>
+              <p>0</p>
+            </div>
+            <div class="note-categories-flex">
+              <div>
+                <i class="fa-solid fa-book"></i>
+                <p>Gardening</p>
+              </div>
+              <p>0</p>
+            </div>
+            <div class="note-categories-flex">
+              <div>
+                <i class="fa-solid fa-book"></i>
+                <p>Work</p>
+              </div>
+              <p>0</p>
+            </div>
+          </div>
+          <div class="note-list"></div>
+          <div class="note-content-wrapper">
+            <div class="note-content">
+              <p class="note-date-info">November 13, 2021 at 2:00pm</p>
+              <p class="note-title-info">
+                Baked Chicken with Roasted Winter Vegetables
+              </p>
+              <p class="note-content-info">
+                Preheat oven to 425°F. Line a large rimmed, baking sheet with
+                parchment paper. Toss the chopped vegetables and herbs with
+                oil directly on the baking sheet. Place chicken on top of the
+                vegetables. Season chicken and veggies with salt and pepper.
+                Bake until the chicken is cooked through and the potatoes are
+                tender, about 30-35 minutes. Toss and turn the vegetables once
+                or twice during cooking
+              </p>
+            </div>
+            <div class="input-container">
+              <textarea class="input-note-title" placeholder="Title" spellcheck="false"></textarea>
+              <textarea class="input-note-description" placeholder="Note" spellcheck="false"></textarea>
+              <div class="button-container">
+                <button class="cancel-btn">Cancel</button>
+                <button class="save-btn">Save</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
