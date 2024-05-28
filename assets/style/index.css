@@ -7,10 +7,6 @@
     margin-inline: auto;
 }
 
-/* body {
-    font-weight: 600;
-} */
-
 /* ------------------Main style------------------ */
 /* ---------------------------------------------- */
 
@@ -23,14 +19,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 100px; */
 }
 
 .note-container-box {
     height: 80%;
     width: 70%;
     border-radius: 30px;
-    /* padding: 30px; */
     background-color: #141439;
 }
 
@@ -149,7 +143,6 @@ main {
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    /* box-shadow: inset 0px -10px 22px 2px rgba(20,20,57,0.8);   */
 }
 
 .note-list div {

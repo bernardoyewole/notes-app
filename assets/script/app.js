@@ -27,11 +27,17 @@ onEvent('load', window, () => {
 onEvent('click', createNote, () => {
     noteContent.style.display = 'none';
     inputContainer.style.display = 'block';
+    inputNoteTitle.focus();
+    removeSelectedPreview();
 });
 
-onEvent('click', deleteNote, () => {
+function removeSelectedPreview() {
+    let currentSelected = select('.selected-note');
 
-});
+    if (currentSelected !== null) {
+        currentSelected.classList.remove('selected-note');
+    }
+}
 
 categories.forEach(category => {
     onEvent('click', category, () => {
@@ -46,7 +52,6 @@ categories.forEach(category => {
         updateNoteList();
     });
 });
-
 
 let notes = getNotesFromStorage();
 
@@ -91,6 +96,25 @@ onEvent('click', cancelBtn, () => {
     inputNoteDescrip.value = '';
 });
 
+function truncateTitle(title, maxLength) {
+    if (title.length <= maxLength) {
+        return title;
+    }
+
+    // Find the last space within the maxLength
+    let truncatedTitle = title.substring(0, maxLength + 1);
+    let lastSpaceIndex = truncatedTitle.lastIndexOf(' ');
+
+    if (lastSpaceIndex > -1) {
+        truncatedTitle = truncatedTitle.substring(0, lastSpaceIndex);
+    } else {
+        // If no space is found, truncate at maxLength
+        truncatedTitle = title.substring(0, maxLength);
+    }
+
+    return truncatedTitle + '...';
+}
+
 function updateNoteList() {
     noteListContainer.innerHTML = '';
     let selectedCategory = select('.selected-category p');
@@ -102,7 +126,7 @@ function updateNoteList() {
         let date = document.createElement('p');
         let id = document.createElement('span');
 
-        title.innerText = note.title;
+        title.innerText = truncateTitle(note.title, 25);
         title.classList.add('note-title');
         date.innerText = new Date(note.id).toLocaleDateString().replaceAll('-', '/');
         date.classList.add('note-date');
@@ -187,8 +211,5 @@ onEvent('click', deleteNote, () => {
         notes = getNotesFromStorage()
         updateCategories();
         updateNoteList();
-        console.log(notes);
     }
 });
-
-console.log(notes);
